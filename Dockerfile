@@ -1,7 +1,7 @@
 FROM nginx:mainline-alpine
 COPY riddick.png /usr/share/nginx/html
 COPY conf/ /etc/nginx/
-RUN rm /share/nginx/html/index.html
+RUN  ls -la /share/nginx/html/
 COPY conf.d/ /etc/nginx/conf.d
 COPY /usr/share/nginx/html/index.html /usr/share/nginx/html/
 RUN mkdir -p /usr/share/nginx/html/ks
